@@ -11,6 +11,11 @@ public class Main {
     public static void main(String[] args) {
         Main instance = new Main();
 
+        if (args.length < 1) {
+            System.out.println("[INFO]: help?\n\tjavac Main.java\n\tjava Main file\n\tjava Main input");
+                System.exit(0);
+        }
+
         if (args[0].compareTo("file") == 0) {
             instance.FromFile(args[1]);
         } else {
